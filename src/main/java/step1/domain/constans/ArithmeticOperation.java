@@ -1,4 +1,6 @@
-package step1.domain;
+package step1.domain.constans;
+
+import step1.constans.ErrorMessage;
 
 import java.util.Arrays;
 
@@ -40,7 +42,9 @@ public enum ArithmeticOperation {
         return Arrays.stream(ArithmeticOperation.values())
                 .filter(operation -> operation.symbol.equals(inputSymbol))
                 .findFirst()
-                .orElseThrow(() -> new IllegalArgumentException("Invalid operation symbol: " + inputSymbol));
+                .orElseThrow(() ->
+                        new IllegalArgumentException(ErrorMessage.INVALID_OPERATOR.getFormatMessage(inputSymbol))
+                );
     }
 
     public int roundDown(int number){

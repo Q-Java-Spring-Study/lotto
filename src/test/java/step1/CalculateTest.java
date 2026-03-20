@@ -1,7 +1,7 @@
 package step1;
 
 import org.junit.jupiter.api.Test;
-import step1.domain.ArithmeticOperation;
+import step1.domain.constans.ArithmeticOperation;
 
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;

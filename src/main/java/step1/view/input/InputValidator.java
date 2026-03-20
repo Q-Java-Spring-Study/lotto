@@ -1,16 +1,21 @@
 package step1.view.input;
 
-import java.util.Scanner;
+import java.util.List;
 
 public class InputValidator {
-    static final Scanner scanner = new Scanner(System.in);
+
+    // 추가 되는 문자열 벨리데이션 정보를 모아서 사용
+    private static final List<Validator> validators = List.of(
+            new EmptyInputValidator(),
+            new FormatValidator(),
+            new TokenSequenceValidator()
+    );
 
     private InputValidator(){}
 
-    public static boolean isValid(String input){
-        if (input == null || input.isBlank()) {
-            throw new IllegalArgumentException("empty input");
+    public static void validateAll(String input){
+        for (Validator validator : validators) {
+            validator.validate(input);
         }
-        return true;
     }
 }

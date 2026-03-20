@@ -77,12 +77,12 @@ void isBlank_ShouldReturnTrueForNullOrBlankStrings(String input) {
 
 ### 작업 내용
 #### 입력
-- [ ] 사용자가 숫자와 사직 연산 사이에 빈공백을 넣어 전달한다.
+- [X] 사용자가 숫자와 사직 연산 사이에 빈공백을 넣어 전달한다.
 
 #### 핵심 로직 (도메인)
 - [X] 연산 결과는 항상 정수(나누기)
 - [X] 사칙연산의 순서는 앞에서부터 한다
-- [X] 덧셈
+- [X] 덧셈 
 - [X] 뺄셈
 - [X] 곱셈
 - [X] 나눗셈
@@ -90,4 +90,4 @@ void isBlank_ShouldReturnTrueForNullOrBlankStrings(String input) {
 - [X] 사칙 연산을 모두 포함하는 기능 구현
 
 #### 출력
-- [ ] 연산 결과를 정수로 전달한다.
+- [X] 연산 결과를 정수로 전달한다.
